@@ -1,0 +1,117 @@
+/* 
+
+break points (Puntos de quiebre)
+
+valores especificos del ancho de pantalla donde cambia en diseño del sitio web oara adaptase mejor a las dimensones del dispositivo
+
+ayuda a defini rlos estillos mediante los media queries
+tradicionalmente, los break points se define segun categorias comunes de los dispositivos.
+
+basandonos en los dispositivos:
+
+- Moviles pequeños de 320 a 479px
+- moviles: de 480 a 767 ancho pantlla
+- tablet: 768px a 1023px ancho pantalla
+- escritorio: de 1024px a 1279px
+- pantallas grandes: 1280px y superior ancho de pantalla
+
+es recomendable solo usar los break points necesarios, general del 3 a 5, para mantener el codigo manejable.
+
+los media querias se recomienda ecribirlos al final del codigo css base.
+
+Metodologias de diseño responsivo
+1.- Mobile first (Primero moviles)
+  Primero establecemos los estilos para vomiles como base se usan los media queries com "min-width" para ir ampliando funcionalidades
+
+2.- Desktop first (Primero escritorio)
+  Primero establecemos los estilos para escritorio o pantallas grandes y se usan los media queries con "max-width" y vamos reduciendo el tamaño de pantalla para ajustar las funcionalidades
+
+*/
+
+/* Movile first - Break points */
+
+/* establecemos ESTILOS BASE para moviles pequeños de hasta 479px de ancho */
+
+body {
+  /* Estilos para moviles pequeños */
+  background-color: rgb(55, 76, 85);
+}
+
+/* Moviles medianos y grandes con min-width: 480px */
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: rgb(75, 126, 109);
+  }
+}
+
+/* Tablet con min-width: 768px */
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: rgb(108, 126, 75);
+  }
+}
+
+/* Escritorio con min-width: 1024px */
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: rgb(126, 102, 75);
+  }
+}
+
+/* Pantallas grandes con min-width: 1280px */
+
+@media screen and (min-width: 1280px) {
+  body {
+    background-color: rgb(126, 75, 75);
+  }
+}
+
+/* Desktop first - Break points */
+
+/* Definimos los estilos base para pantallas grandes */
+
+/* Pantallas grandes con max-width: 1280px */
+
+h1 {
+  font-size: 10rem;
+  color: lawngreen;
+}
+
+/* Escritorio con max-width: 1279px */
+
+@media screen and (max-width: 1279px) {
+  h1 {
+    font-size: 8rem;
+    color: rgb(0, 214, 252);
+  }
+}
+
+/* Tablet con max-width: 1023px */
+
+@media screen and (max-width: 1023px) {
+  h1 {
+    font-size: 6rem;
+    color: rgb(55, 0, 252);
+  }
+}
+
+/* Moviles con max-width: 767px */
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 4rem;
+    color: rgb(252, 0, 210);
+  }
+}
+
+/* Moviles pequeños con max-width: 479px */
+
+@media screen and (max-width: 479px) {
+  h1 {
+    font-size: 2rem;
+    color: rgb(252, 0, 0);
+  }
+}
